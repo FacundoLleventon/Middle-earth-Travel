@@ -1,0 +1,635 @@
+@font-face {
+  font-family: ringbearer;
+  src: url(/ringbearer/ringbearer.TTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+  padding: 60px 0px;
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.titulo {
+  font-family: ringbearer;
+  color: #bd821b;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/*  HEADER  */
+header {
+  width: 100%;
+  height: 700px;
+  background: rgba(220, 227, 89, 0.329);
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(rgba(29, 154, 34, 0.397)), to(rgba(119, 121, 47, 0.349))), url(/imagenes/Middle-earth.jpg);
+  background: linear-gradient(to right, rgba(29, 154, 34, 0.397), rgba(119, 121, 47, 0.349)), url(/imagenes/Middle-earth.jpg);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: 50%;
+  position: relative;
+}
+
+header .textos-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 700px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+header .textos-header h1 {
+  font-family: ringbearer;
+  font-size: 60px;
+  color: white;
+  text-shadow: 6px 2px 10px black;
+}
+
+header .textos-header h2 {
+  font-size: 30px;
+  color: white;
+  font-weight: 300;
+  text-shadow: 6px 2px 6px black;
+}
+
+nav {
+  text-align: right;
+  padding: 30px 50px 0 0;
+}
+
+nav a {
+  color: white;
+  font-weight: 100;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/*  NUESTRO SERVICIO  */
+.nuestros-servicios {
+  padding-bottom: 30px;
+}
+
+.servicio-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.servicio-ind {
+  width: 28%;
+  text-align: center;
+}
+
+.servicio-ind img {
+  width: 90%;
+}
+
+.servicio-ind h3 {
+  margin: 20px 0 10px 0;
+}
+
+.servicio-ind p {
+  text-align: justify;
+}
+
+/*  ALOJAMIENTOS  */
+.portfolio {
+  background: #f2f2f2;
+}
+
+.portfolio-contenido {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.galeria-port {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 48%;
+}
+
+.imagen-port {
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  -webkit-box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.507);
+          box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.507);
+}
+
+.imagen-port img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.imagenes-port {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.imagenes-port .imagen-chi {
+  width: 33%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  -webkit-box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.507);
+          box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.507);
+}
+
+.imagenes-port .imagen-chi img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.hover-galeria {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: rgba(203, 140, 32, 0.596);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hover-galeria p {
+  color: white;
+  padding-top: 10px;
+}
+
+.hover-galeria i {
+  color: #f2f2f2;
+  font-size: 80px;
+}
+
+.imagen-port:hover .hover-galeria {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.contenido-textos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 48%;
+}
+
+.contenido-textos p {
+  padding: 0 0 30px 15px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.contenido-textos h3 {
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.contenido-textos h3 span {
+  background: #0d9211;
+  color: white;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.507);
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.507);
+  margin-right: 10px;
+}
+
+.contenido-textos .reservar {
+  margin: auto;
+  text-align: center;
+  border-radius: 18px;
+  text-decoration: none;
+  background-color: #0d9211;
+  color: #f2f2f2;
+  padding: 7px 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: 2px solid transparent;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.contenido-textos .reservar:hover {
+  background-color: transparent;
+  border: 2px solid #0d9211;
+  color: #0d9211;
+}
+
+.contenido-textos .agotado {
+  margin: auto;
+  text-align: center;
+  border-radius: 18px;
+  text-decoration: none;
+  background-color: #e21515;
+  color: #414141;
+  padding: 7px 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: 2px solid transparent;
+  cursor: not-allowed;
+}
+
+.contenido-textos .agotado:hover {
+  background-color: #e21515;
+  border: 2px solid transparent;
+  color: #414141;
+}
+
+/*  CLIENTES */
+.portfolioClientes {
+  background: #414141;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.card {
+  background: #bd821b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 46%;
+  height: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.603);
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.603);
+}
+
+.card img {
+  width: 140px;
+  height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: block;
+}
+
+.card .contenido-texto-card {
+  width: 60%;
+  color: white;
+}
+
+.card .contenido-texto-card p {
+  padding-top: 5px;
+}
+
+/*  FORMULARIO  */
+.formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 500px;
+  background: #414141;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.603);
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.603);
+  color: white;
+}
+
+.formulario h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.formulario select, .formulario .noches {
+  width: 100%;
+  background: #bd821b;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 16px 0;
+  border: 1px solid #bd821b;
+  color: #414141;
+  font-size: 16px;
+}
+
+.formulario label {
+  margin-top: 16px;
+}
+
+.formulario .submit {
+  margin: 15px auto;
+  text-align: center;
+  border-radius: 18px;
+  background-color: #bd821b;
+  color: #414141;
+  -webkit-box-shadow: 0 9px #999;
+          box-shadow: 0 9px #999;
+  padding: 7px 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.formulario .submit:hover {
+  pointer-events: visibleFill;
+  background-color: transparent;
+  border: 2px solid #bd821b;
+  color: #bd821b;
+}
+
+.formulario .submit:active {
+  background-color: transparent;
+  color: #bd821b;
+  -webkit-box-shadow: 0 5px #666;
+          box-shadow: 0 5px #666;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+/*  FOOTER  */
+footer {
+  background: #bd821b;
+  padding: 60px 0 30px 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.contenedor-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #0d9211;
+}
+
+.contenedor-foo {
+  text-align: center;
+}
+
+.contenedor-foo h4 {
+  color: white;
+  border-bottom: 3px solid #0d9211;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.contenedor-foo p {
+  color: white;
+}
+
+.titulo-final {
+  text-align: center;
+  font-size: 20px;
+  margin: 20px 0 0 0;
+  color: #ccc;
+}
+
+/*  MEDIA QUERY  */
+@media screen and (max-width: 900px) {
+  header {
+    background-position: center;
+  }
+  .contenedor-sobre-nosotros {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenedor-sobre-nosotros .contenido-textos {
+    width: 90%;
+  }
+  .contenedor-sobre-nosotros .imagen-sobre-nosotros {
+    width: 90%;
+    padding-bottom: 20px;
+  }
+  /*  HOBBITON  */
+  .imagen-port {
+    width: 100%;
+  }
+  /*  CLIENTES  */
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cards .card {
+    width: 90%;
+  }
+  .cards .card img {
+    width: 100px;
+    height: 100px;
+  }
+  .cards .card:first-child {
+    margin-bottom: 30px;
+  }
+  /*  NUESTRO SERVICIO  */
+  .servicio-cont {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .servicio-ind {
+    width: 100%;
+    text-align: center;
+  }
+  .servicio-ind img {
+    width: 90%;
+  }
+  .servicio-ind:nth-child(1), .servicio-ind:nth-child(2), .servicio-ind:nth-child(3) {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    text-align: center;
+    padding: 30px 0 0 0;
+  }
+  nav a {
+    margin: 0 10px;
+  }
+  header .textos-header {
+    padding: 0 5px;
+  }
+  header .textos-header h1 {
+    font-size: 35px;
+  }
+  header .textos-header h2 {
+    font-size: 20px;
+  }
+  /*  PORTFOLIO  */
+  .imagen-port {
+    width: 95%;
+  }
+  /*  CLIENTES  */
+  .cards .card {
+    height: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  /*  FOOTER  */
+  .contenedor-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: none;
+  }
+  .contenedor-foo {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .contenedor-foo h4 {
+    border: none;
+  }
+  .contenedor-foo p {
+    color: #ccc;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 20px;
+  }
+  .titulo-final {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
