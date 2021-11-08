@@ -1,6 +1,6 @@
 @font-face {
   font-family: ringbearer;
-  src: url(/ringbearer/ringbearer.TTF);
+  src: url(ringbearer/ringbearer.TTF);
 }
 
 * {
@@ -37,8 +37,8 @@ header {
   background: rgba(220, 227, 89, 0.329);
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(rgba(29, 154, 34, 0.397)), to(rgba(119, 121, 47, 0.349))), url(/imagenes/Middle-earth.jpg);
-  background: linear-gradient(to right, rgba(29, 154, 34, 0.397), rgba(119, 121, 47, 0.349)), url(/imagenes/Middle-earth.jpg);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(29, 154, 34, 0.397)), to(rgba(119, 121, 47, 0.349))), url(imagenes/Middle-earth.jpg);
+  background: linear-gradient(to right, rgba(29, 154, 34, 0.397), rgba(119, 121, 47, 0.349)), url(imagenes/Middle-earth.jpg);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   background-attachment: fixed;
