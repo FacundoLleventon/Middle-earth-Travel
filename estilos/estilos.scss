@@ -41,8 +41,8 @@ header{
     width: 100%;
     height: 700px;
     background: hsla(63, 71%, 62%, 0.329);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(122, 68%, 36%, 0.397), rgba(62, 44%, 33%, 0.349)), url(../imagenes/Middle-earth.jpg);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(122, 68%, 36%, 0.397), hsla(62, 44%, 33%, 0.349)), url(../imagenes/Middle-earth.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, hsla(122, 68%, 36%, 0.397), rgba(62, 44%, 33%, 0.349)), url(https://github.com/FacundoLleventon/Middle-earth-Travel/blob/c7d4cc200cfb2931f82120d351b0e6cbfc80c501/imagenes/Middle-earth.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(122, 68%, 36%, 0.397), hsla(62, 44%, 33%, 0.349)), url(https://github.com/FacundoLleventon/Middle-earth-Travel/blob/c7d4cc200cfb2931f82120d351b0e6cbfc80c501/imagenes/Middle-earth.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     background-position-y: 50%;
