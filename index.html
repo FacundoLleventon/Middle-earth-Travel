@@ -7,6 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,14 +115,14 @@
             <section class="clientes contenedor">
             <h2 class="titulo">Qué dicen nuestros clientes</h2>
             <div class="cards">
-                <div class="card">
+                <div class="card wow animate__animated animate__bounceInLeft">
                     <img src="imagenes/Thorin.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Thorin</h4>
                         <p>El hotel es precioso. Adornada como una casa familiar, pueden entrar 13 enanos sin problema y encima sobra espacio. El buffete es abundante. Pocas veces vi tanta comida en una despensa. Hay que tener cuidado con el casero que es un poco ladrón, pero nada grave.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__animated animate__bounceInRight">
                     <img src="imagenes/gandalf.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Gandalf</h4>
@@ -177,14 +178,14 @@
             <section class="clientes contenedor">
             <h2 class="titulo">Qué dicen nuestros clientes</h2>
             <div class="cards">
-                <div class="card">
+                <div class="card wow animate__animated animate__bounceInLeft">
                     <img src="imagenes/gandalf.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Gandalf</h4>
                         <p>El lugar es de calidad dudosa. No puedo recomendarlo: la atención es pésima, el dueño me respondió mal cada vez que le pedía algo; para colmo, la habitación estaba muy vacía. No tenía paredes ni techo, y tuve que dormir en el piso. La vista es hermosa, eso sí.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__animated animate__bounceInRight">
                     <img src="imagenes/saruman.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Saruman</h4>
@@ -240,14 +241,14 @@
             <section class="clientes contenedor">
             <h2 class="titulo">Qué dicen nuestros clientes</h2>
             <div class="cards">
-                <div class="card">
+                <div class="card wow animate__animated animate__bounceInLeft">
                     <img src="imagenes/Thorin.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Gimli</h4>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloremque quidem numquam consectetur rerum fugiat. Nobis earum debitis ab velit dolore, eveniet mollitia, hic eaque officiis quas fuga aliquid molestiae.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__animated animate__bounceInRight">
                     <img src="imagenes/gandalf.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Gandalf</h4>
@@ -303,14 +304,14 @@
             <section class="clientes contenedor">
             <h2 class="titulo">Qué dicen nuestros clientes</h2>
             <div class="cards">
-                <div class="card">
+                <div class="card wow animate__animated animate__bounceInLeft">
                     <img src="imagenes/boromir.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Boromir</h4>
                         <p>One does not simply walk into Mordor. El alojamiento tiene un acceso muy complicado, no es nada fácil de encontrar, e incluso el GPS se confundía con las indicaciones. El viaje se hace tan eterno que uno siente que muere por llegar.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__animated animate__bounceInRight">
                     <img src="imagenes/gandalf.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Gollum</h4>
@@ -324,7 +325,7 @@
 
         <!-- FORMULARIO -->
         <section class="contenedor">
-            <div class="formulario" id="formulario">
+            <div class="formulario wow animate__animated animate__fadeInUp" id="formulario">
                 <h4>¡Haga su reserva!</h4>
                 <label for="alojamientos">¿Qué alojamiento desea reservar?</label>
                 <select name="alojamientos" id="alojamiento">
@@ -370,6 +371,9 @@
 
     <!-- SCRIPT -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="wow.min.js"></script>
+    <script> new WOW().init(); </script>
     
     <script src="main.js"></script>
 </body>
