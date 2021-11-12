@@ -26,11 +26,10 @@
 
     <header>
         <nav>
-            <a href="#">Inicio</a>
-            <a href="#nuestroproducto">Acerca de</a>
+            <a href="">Inicio</a>
+            <a href="#servicio">Acerca de</a>
             <a href="#portfolio">Nuestros alojamientos</a>
-            <a href="#servicio">lorem</a>
-            <a href="#contacto">lorem</a>
+            <a href="#formulario">Reservar</a>
         </nav>
 
         <section class="textos-header">
@@ -103,7 +102,7 @@
                         <h3><span></span>Lorem ipsum dolor sit amet.</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ratione dolore voluptas sapiente provident quia consectetur autem quaerat neque odit doloribus sit corporis, numquam, iusto atque officiis consequuntur ex ullam.</p>
                         <h3><span></span>El mejor precio</h3>
-                        <p>Disfruta de Hobbiton por sólo $5.000 por noche + IVA</p>
+                        <p>Disfruta de Hobbiton por sólo <strong>$5.000 por noche + IVA</strong></p>
                         <a href="#formulario" class="reservar" id="reservarHobbiton">¡Reservar!</a>  <!-- ACA ESTA EL BOTON QUE SE MODIFICA CON DOM Y EL EVENTO--> 
                     </div>
                 </div>
@@ -166,7 +165,7 @@
                         <h3><span></span>Lorem ipsum dolor sit amet.</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ratione dolore voluptas sapiente provident quia consectetur autem quaerat neque odit doloribus sit corporis, numquam, iusto atque officiis consequuntur ex ullam.</p>
                         <h3><span></span>El mejor precio</h3>
-                        <p>Disfruta de Isengard por sólo $10.000 por noche + IVA</p>
+                        <p>Disfruta de Isengard por sólo <strong>$10.000 por noche + IVA</strong></p>
                         <a href="#formulario" class="reservar" id="reservarIsengard">¡Reservar!</a>  <!-- ACA ESTA EL BOTON QUE SE MODIFICA CON DOM Y EL EVENTO--> 
                     </div>
                 </div>
@@ -229,7 +228,7 @@
                         <h3><span></span>Lorem ipsum dolor sit amet.</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ratione dolore voluptas sapiente provident quia consectetur autem quaerat neque odit doloribus sit corporis, numquam, iusto atque officiis consequuntur ex ullam.</p>
                         <h3><span></span>El mejor precio</h3>
-                        <p>Disfruta de las Minas de Moria por sólo $15.000 por noche + IVA</p>
+                        <p>Disfruta de las Minas de Moria por sólo <strong>$15.000 por noche + IVA</strong></p>
                         <a href="#formulario" class="reservar" id="reservarMoria">¡Reservar!</a>  <!-- ACA ESTA EL BOTON QUE SE MODIFICA CON DOM Y EL EVENTO--> 
                     </div>
                 </div>
@@ -292,7 +291,7 @@
                         <h3><span></span>Lorem ipsum dolor sit amet.</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ratione dolore voluptas sapiente provident quia consectetur autem quaerat neque odit doloribus sit corporis, numquam, iusto atque officiis consequuntur ex ullam.</p>
                         <h3><span></span>El mejor precio</h3>
-                        <p>Disfruta de Mordor por sólo $25.000 por noche + IVA</p>
+                        <p>Disfruta de Mordor por sólo <strong>$25.000 por noche + IVA</strong></p>
                         <a href="#formulario" class="reservar" id="reservarMordor">¡Reservar!</a>  <!-- ACA ESTA EL BOTON QUE SE MODIFICA CON DOM Y EL EVENTO--> 
                     </div>
                 </div>
@@ -308,7 +307,7 @@
                     <img src="imagenes/boromir.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Boromir</h4>
-                        <p>One does not simply walk into Mordor. El alojamiento tiene un acceso muy complicado, no es nada fácil de encontrar, e incluso el GPS se confundía con las indicaciones. El viaje se hace tan eterno que uno siente que muere por llegar.</p>
+                        <p>One does not simply walk into Mordor. El alojamiento tiene un acceso muy complicado, no es nada fácil de encontrar, incluso el GPS se confundía con las indicaciones. El viaje se hace tan eterno que uno siente que muere por llegar.</p>
                     </div>
                 </div>
                 <div class="card wow animate__animated animate__bounceInRight">
@@ -324,28 +323,131 @@
 
 
         <!-- FORMULARIO -->
-        <section class="contenedor">
-            <div class="formulario wow animate__animated animate__fadeInUp" id="formulario">
-                <h4>¡Haga su reserva!</h4>
-                <label for="alojamientos">¿Qué alojamiento desea reservar?</label>
-                <select name="alojamientos" id="alojamiento">
+        <div class="contenedor-formulario">
+            <section class="contenedor">
+                <div class="formulario wow animate__animated animate__fadeInUp" id="formulario">
+                    <h4>¡Haga su reserva!</h4>
+                    <label for="alojamientos">¿Qué alojamiento desea reservar?</label>
+                    <select name="alojamientos" id="alojamiento" required>
 
-                    <option value="hobbiton">Hobbiton</option>
-                    <option value="isengard">Isengard</option>
-                    <option value="moria">Minas de Moria</option>
-                    <option value="mordor">Mordor</option>
-        
-                </select>
-                
-                <label for="noches">¿Cuántas noches desea alojarse?</label>
-                <input class="noches" type="number" name="noches" id="noches">
-                <input class="submit" id="submit" type="submit" value="Confirmar la reserva">
-            </div>
+                        <option value="empty" default="default" selected hidden></option>
+                        <option value="hobbiton">Hobbiton</option>
+                        <option value="isengard">Isengard</option>
+                        <option value="moria">Minas de Moria</option>
+                        <option value="mordor">Mordor</option>
+            
+                    </select>
+                    
+                    <label for="noches">¿Cuántas noches desea alojarse?</label>
+                    <input class="noches" type="number" name="noches" id="noches">
+                    <input class="submit" id="submit" type="submit" value="Confirmar la reserva">
+                </div>
 
-            <div class="resultado" id="resultado"></div>
-        </section>
+            </section>
+        </div>
 
     </main>
+
+    <!-- VENTANA MODAL DE CONFIRMACION -->
+    <section class="modal" id="modal">
+        <main id="main">
+
+            <section id="left">
+                <div id="head">
+                    <h1>Detalles de la reserva</h1>
+                </div>
+                <div id="resultado"></div>
+            </section>
+
+            <section id="right">
+                <div class="form-titulo">
+                    
+                    <h1>Detalles del pago</h1>
+                    <p id="cancelar">X</p>
+                </div>
+
+                <form id="tarjeta" action="#">
+
+                    <div id="form-nombre" class="form-field">
+                        <label for="cc-nombre">Nombre:</label>
+                        <input id="cc-nombre" placeholder="Ingrese su nombre" required>
+                    </div>
+
+                    <div id="form-apellido" class="form-field">
+                        <label for="cc-apellido">Apellido:</label>
+                        <input id="cc-apellido" placeholder="Ingrese su apellido" required>
+                    </div>
+
+                    <div id="form-mail" class="form-field">
+                        <label for="cc-mail">Mail:</label>
+                        <input type="email" id="cc-mail" placeholder="ejemplo@mail.com" required>
+                    </div>
+
+                    <div id="form-card" class="form-field">
+                        <label for="cc-number">Número de tarjeta:</label>
+                        <input id="cc-number" maxlength="19" placeholder="1111 2222 3333 4444" required>
+                    </div>
+        
+                    <div id="form-date" class="form-field">
+                        <label for="expiry-month">Fecha de vencimiento:</label>
+                        <div id="date-val">
+                            <select id="expiry-month" required>
+                                <option id="trans-label_month" value="" default="default" selected="selected">Mes</option>
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                                <option value="5">05</option>
+                                <option value="6">06</option>
+                                <option value="7">07</option>
+                                <option value="8">08</option>
+                                <option value="9">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <select id="expiry-year" required>
+                                <option id="trans-label_year" value="" default="" selected="selected">Año</option>
+                                <option value="2022">22</option>
+                                <option value="2023">23</option>
+                                <option value="2024">24</option>
+                                <option value="2025">25</option>
+                                <option value="2026">26</option>
+                                <option value="2027">27</option>
+                                <option value="2028">28</option>
+                                <option value="2029">29</option>
+                                <option value="2030">30</option>
+                                <option value="2031">31</option>
+                                <option value="2032">32</option>
+                                <option value="2033">33</option>
+                                <option value="2034">34</option>
+                                <option value="2035">35</option>
+                                <option value="2036">36</option>
+                                <option value="2037">37</option>
+                                <option value="2038">38</option>
+                                <option value="2039">39</option>
+                                <option value="2040">40</option>
+                                <option value="2041">41</option>
+                                <option value="2042">42</option>
+                                <option value="2043">43</option>
+                                <option value="2044">44</option>
+                                <option value="2045">45</option>
+                                <option value="2046">46</option>
+                                <option value="2047">47</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                    <div id="form-sec-code" class="form-field">
+                        <label for="sec-code">CVV:</label>
+                        <input id="password" type="password" maxlength="3" placeholder="123" required>
+                    </div>
+        
+                    <button type="submit" id="confirmarPago">Confirmar Pago</button>
+                </form>
+            </section>
+        </main>
+    </section>
 
 
     <!-- FOOTER -->

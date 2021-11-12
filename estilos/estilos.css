@@ -104,6 +104,7 @@ nav a:hover {
 /*  NUESTRO SERVICIO  */
 .nuestros-servicios {
   padding-bottom: 30px;
+  background-color: white;
 }
 
 .servicio-cont {
@@ -137,7 +138,7 @@ nav a:hover {
 
 /*  ALOJAMIENTOS  */
 .portfolio {
-  background: #f2f2f2;
+  background: #414141;
 }
 
 .portfolio-contenido {
@@ -268,11 +269,11 @@ nav a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 48%;
+  color: #f0e5d1;
 }
 
 .contenido-textos p {
   padding: 0 0 30px 15px;
-  font-weight: 300;
   text-align: justify;
 }
 
@@ -282,7 +283,7 @@ nav a:hover {
 }
 
 .contenido-textos h3 span {
-  background: #0d9211;
+  background: #bd821b;
   color: white;
   border-radius: 50%;
   display: inline-block;
@@ -300,7 +301,7 @@ nav a:hover {
   text-align: center;
   border-radius: 18px;
   text-decoration: none;
-  background-color: #0d9211;
+  background-color: #0d8a11;
   color: #f2f2f2;
   padding: 7px 20px;
   text-transform: uppercase;
@@ -311,9 +312,9 @@ nav a:hover {
 }
 
 .contenido-textos .reservar:hover {
-  background-color: transparent;
-  border: 2px solid #0d9211;
-  color: #0d9211;
+  background-color: #f2f2f2;
+  border: 2px solid #0d8a11;
+  color: #0d8a11;
 }
 
 .contenido-textos .agotado {
@@ -339,6 +340,8 @@ nav a:hover {
 /*  CLIENTES */
 .portfolioClientes {
   background: #414141;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(23%, #414141), to(#8b6421));
+  background: linear-gradient(180deg, #414141 23%, #8b6421 100%);
 }
 
 .cards {
@@ -364,8 +367,8 @@ nav a:hover {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.603);
-          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.603);
+  -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.603);
+          box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.603);
 }
 
 .card img {
@@ -388,6 +391,13 @@ nav a:hover {
 }
 
 /*  FORMULARIO  */
+.contenedor-formulario {
+  background: url(../imagenes/ring.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
 .formulario {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -401,9 +411,10 @@ nav a:hover {
   padding: 30px;
   margin: 20px auto;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.603);
-          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.603);
-  color: white;
+  -webkit-box-shadow: 0 0 600px 100px rgba(0, 0, 0, 0.822);
+          box-shadow: 0 0 600px 100px rgba(0, 0, 0, 0.822);
+  color: #f2f2f2;
+  z-index: 1;
 }
 
 .formulario h4 {
@@ -457,9 +468,197 @@ nav a:hover {
           transform: translateY(4px);
 }
 
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(140, 140, 140, 0.623)), to(rgba(26, 26, 26, 0.753)));
+  background: linear-gradient(rgba(140, 140, 140, 0.623), rgba(26, 26, 26, 0.753));
+}
+
+#main {
+  margin: auto;
+  position: relative;
+  width: 550px;
+  height: 550px;
+  left: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: white;
+  margin-top: 12vh;
+}
+
+#left {
+  position: relative;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(16, 81, 18, 0.5)), to(rgba(76, 77, 30, 0.5))), url("../imagenes/argonath.jpg");
+  background: linear-gradient(to right, rgba(16, 81, 18, 0.5), rgba(76, 77, 30, 0.5)), url("../imagenes/argonath.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100% + 50px);
+  width: 45%;
+  top: -35px;
+  left: -50px;
+  padding: 15px 25px 0px 25px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#left #resultado {
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 2px 3px 6px black;
+}
+
+#right {
+  position: absolute;
+  width: calc(60% - 40px);
+  height: 100%;
+  top: 0;
+  left: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+#right .form-titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#right .form-titulo p {
+  font-size: 16px;
+  color: #ad0d0d;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  cursor: pointer;
+}
+
+#right .form-titulo p:hover {
+  transform: scale(1.6) rotate(540deg);
+  -webkit-transform: scale(1.6) rotate(540deg);
+  -webkit-transform-origin: 48% 35%;
+          transform-origin: 48% 35%;
+}
+
+#right form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#right form input,
+#right form select {
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  padding: 5px;
+  margin-top: 2.5px;
+  position: relative;
+}
+
+#right form .form-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+#right form #date-val {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#right form #date-val select {
+  width: 45%;
+}
+
+#right form button[type=submit] {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(29, 154, 34, 0.808)), to(rgba(119, 121, 47, 0.877)));
+  background: linear-gradient(to right, rgba(29, 154, 34, 0.808), rgba(119, 121, 47, 0.877));
+  padding: 5px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 12pt;
+  margin-top: 10px;
+}
+
+#right form button[type=submit]:hover {
+  background: transparent;
+  -webkit-box-shadow: 0 0 0 3px #0d8a11;
+          box-shadow: 0 0 0 3px #0d8a11;
+  color: #0d8a11;
+}
+
 /*  FOOTER  */
 footer {
-  background: #bd821b;
+  background: #414141;
   padding: 60px 0 30px 0;
   margin: auto;
   overflow: hidden;
@@ -475,7 +674,7 @@ footer {
           justify-content: space-evenly;
   margin: auto;
   padding-bottom: 50px;
-  border-bottom: 1px solid #0d9211;
+  border-bottom: 1px solid #0d8a11;
 }
 
 .contenedor-foo {
@@ -484,7 +683,7 @@ footer {
 
 .contenedor-foo h4 {
   color: white;
-  border-bottom: 3px solid #0d9211;
+  border-bottom: 3px solid #0d8a11;
   padding-bottom: 5px;
   margin-bottom: 10px;
 }

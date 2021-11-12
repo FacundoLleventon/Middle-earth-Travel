@@ -1,4 +1,4 @@
-$color1: rgb(13, 146, 17);
+$color1: #0d8a11;
 $color2: #f2f2f2;
 $color3: #414141;
 $color4: #bd821b;
@@ -99,6 +99,7 @@ nav{
 /*  NUESTRO SERVICIO  */
 .nuestros-servicios{
     padding-bottom: 30px;
+    background-color: white;
 }
 
 .servicio-cont{
@@ -127,7 +128,7 @@ nav{
 
 /*  ALOJAMIENTOS  */
 .portfolio{
-    background: $color2;
+    background: $color3;
 }
 
 .portfolio-contenido{
@@ -218,11 +219,12 @@ nav{
     display: flex;
     flex-direction: column;
     width: 48%;
+    color: rgb(240, 229, 209);
     // padding: 0 0 0 50px;
 
     p{
         padding: 0 0 30px 15px;
-        font-weight: 300;
+        // font-weight: 300;
         text-align: justify;
     }
 
@@ -231,7 +233,7 @@ nav{
         margin-left: 10px;
 
         span{
-            background: $color1;
+            background: $color4;
             color: white;
             border-radius: 50%;
             display: inline-block;
@@ -258,7 +260,7 @@ nav{
         transition: .3s ease;
 
         &:hover{
-            background-color: transparent;
+            background-color: $color2;
             border: 2px solid $color1;
             color: $color1;
         }
@@ -291,7 +293,9 @@ nav{
 
 /*  CLIENTES */
 .portfolioClientes{
-    background: $color3;
+    // background: $color3;
+    background: rgb(65,65,65);
+    background: linear-gradient(180deg, rgba(65,65,65,1) 23%, rgb(139, 100, 33) 100%); 
 }
 
 .cards{
@@ -307,7 +311,7 @@ nav{
     align-items: center;
     justify-content: space-evenly;
     border-radius: 5px;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.603);
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.603);
 
     img{
         width: 140px;
@@ -329,6 +333,14 @@ nav{
 }
 
 /*  FORMULARIO  */
+.contenedor-formulario{
+    background: url(../imagenes/ring.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+}
+
 .formulario{
     display: flex;
     flex-direction: column;
@@ -337,8 +349,9 @@ nav{
     padding: 30px;
     margin: 20px auto;
     border-radius: 5px;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.603);
-    color: white;
+    box-shadow: 0 0 600px 100px rgba(0, 0, 0, 0.822);
+    color: $color2;
+    z-index: 1;
 
     h4{
         font-size: 22px;
@@ -396,9 +409,150 @@ nav{
 
 
 
+// VENTANA MODAL DE CONFIRMACION
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  display: none;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(hsla(0, 0%, 55%, 0.623), hsla(0, 0%, 10%, 0.753));
+//   font-family: "Raleway", sans-serif;
+}
+
+#main {
+  margin: auto;
+  position: relative;
+  width: 550px;
+  height: 550px;
+  left: 30px;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: white;
+  margin-top: 12vh;
+}
+
+#left {
+  position: relative;
+  background: linear-gradient(to right, hsla(122, 68%, 19%, 0.5), hsla(61, 44%, 21%, 0.5)), url("../imagenes/argonath.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100% + 50px);
+  width: 45%;
+  top: -35px;
+  left: -50px;
+  padding: 15px 25px 0px 25px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  #resultado{
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 2px 3px 6px black;
+  }
+}
+
+#right {
+    position: absolute;
+    width: calc(60% - 40px);
+    height: 100%;
+    top: 0;
+    left: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: 20px;
+    padding-top: 20px;
+
+    .form-titulo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        p{
+            font-size: 16px;
+            color: rgb(173, 13, 13);
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            transition: .3s ease;
+            cursor: pointer;
+
+            &:hover{
+                transform: scale(1.6) rotate(540deg);
+                -webkit-transform: scale(1.6) rotate(540deg);
+                transform-origin: 48% 35%;
+            }
+        }
+    }
+  }
+  
+  #right form {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  #right form input,
+  #right form select {
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+    border: none;
+    border-bottom: 1.5px solid #ccc;
+    padding: 5px;
+    margin-top: 2.5px;
+    position: relative;
+  }
+  
+  #right form .form-field {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  #right form #date-val {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #right form #date-val select {
+    width: 45%;
+  }
+  
+  #right form button[type=submit] {
+    background: linear-gradient(to right, hsla(122, 68%, 36%, 0.808), hsla(62, 44%, 33%, 0.877));
+    padding: 5px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: 400;
+    font-size: 12pt;
+    margin-top: 10px;
+  }
+  
+  #right form button[type=submit]:hover {
+    background: transparent;
+    box-shadow: 0 0 0 3px $color1;
+    color: $color1;
+  }
+
+
+
+
 /*  FOOTER  */
 footer{
-    background: $color4;
+    background: $color3;
     padding: 60px 0 30px 0;
     margin: auto;
     overflow: hidden;

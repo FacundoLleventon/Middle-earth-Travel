@@ -59,9 +59,9 @@ function reservarHabitacion() {
     noches = $("#noches").val();
     nombre = $("#alojamiento").val();
     
-    if (noches > 0) {
         
         switch(nombre){
+            
             case "hobbiton":
                 nombre = hobbiton.nombre;
                 precio = hobbiton.precio;
@@ -97,26 +97,32 @@ function reservarHabitacion() {
         
 
         return new Habitacion(nombre, precio, noches, libre)
-    }
 }
 
 
-// FUNCION PARA VALIDAR LAS NOCHES INGRESADAS
+// FUNCION PARA VALIDAR EL ALOJAMIENTO Y NOCHES INGRESADAS
 function validarNoches(){
    
-    if($("#noches").val() <= 0){
+    if ($("#noches").val() <= 0) {
         alert("La cantidad de noches debe ser mayor a 0");
         $("#noches").focus();
         return false;
-    }
+    } else if ($("#alojamiento").val() == "empty") {
+        alert("Seleccione su alojamiento");
+        $("#noches").focus();
+        return false;
+
+    } else
 
     return true;
 }
 
 
-// EVENTO CLICK
+
+// EVENTO RESERVA
 $(document).ready(function() { 
 
+    // SELECCIONAR ALOJAMIENTO
     $("#submit").click(function (e) { 
 
         e.preventDefault();
@@ -128,30 +134,95 @@ $(document).ready(function() {
             reserva.calcularSubTotal();
             reserva.calcularIva();
             reserva.calcularTotal();
-                
+
             
             /*  LOCALSTORAGE  */
             localStorage.setItem('reservaRealizada', JSON.stringify(reserva));
 
+
+            // MUESTRA LA VENTANA MODAL DE CONFIRMACION
+            $("#modal").fadeIn();
 
 
             /* FUNCION PARA MOSTRAR EL RESULTADO */
             function mostrarReserva() {
 
                 $("#resultado").html(
-                `¡Su reserva en ${reserva.nombre} ha sido realizada con éxito!<br><br>
+                `Alojamiento: <b>${reserva.nombre}</b>
+                <br><br>
+                Cantidad de noches: <b>${reserva.noches}</b>
+                <br><br>
 
                 <b>Subtotal:</b><br>
                 $${reserva.precio} x ${reserva.noches} noches = $${(reserva.precio * reserva.noches)}<br>
-                + IVA 21% = $${reserva.calcularIva()}<br><br>
+                + IVA 21% =  $${reserva.calcularIva()}
+                <br><br><br><br><br><br><br><br><br><br><br><br>
 
-                <b>Total final</b> = $${reserva.total}<br><br>
-
-                ¡Que tenga una estadía de fantasía!
+                <h3>Total final:
+                <br>$${reserva.total}</h3><br><br>
                 `);
             }
 
             mostrarReserva()
         }
     });
+
+
+    // CONFIRMAR PAGO
+    $("#tarjeta").submit(function (e) { 
+        
+        e.preventDefault();
+
+        alert(`¡Su reserva a ha sido realizada con éxito!\n
+        ¡Que tenga una estadía de fantasía!`);
+
+        $("#modal").hide();
+
+        localStorage.clear();
+    
+    });
+
+
+
+    //   if (localStorage.length > 0) {
+
+    //     let reservaRealizada = JSON.parse(localStorage.getItem('reservaRealizada'));
+    //     const reserva = new Habitacion(reservaRealizada);
+        
+    //     // MUESTRA LA VENTANA MODAL DE CONFIRMACION
+    //     $("#modal").fadeIn();
+
+    //     /* FUNCION PARA MOSTRAR EL RESULTADO */
+    //     function mostrarReserva() {
+
+    //         $("#resultado").html(
+    //         `Alojamiento: <b>${reserva.nombre}</b>
+    //         <br><br>
+    //         Cantidad de noches: <b>${reserva.noches}</b>
+    //         <br><br>
+
+    //         <b>Subtotal:</b><br>
+    //         $${reserva.precio} x ${reserva.noches} noches = $${(reserva.precio * reserva.noches)}<br>
+    //         + IVA 21% =  $${reserva.calcularIva()}
+    //         <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    //         <h3>Total final:
+    //         <br>$${reserva.total}</h3><br><br>
+    //         `);
+    //     }
+
+    //     mostrarReserva()
+    // }
+
+
+    $("#cancelar").click(function (e) { 
+        
+        e.preventDefault();
+
+        $("#modal").hide();
+
+        localStorage.clear();
+    
+    });
+    
 });
