@@ -51,18 +51,18 @@
                 <h2 class="titulo" id="servicio">Nuestro servicio</h2>
                 <div class="servicio-cont">
                     <div class="servicio-ind">
-                        <img src="imagenes/hobbit-day-20171.jpg" alt="">
-                        <h3>Name</h3>
+                        <img src="imagenes/comida.jpg" alt="">
+                        <h3 class="titulo">Un buffete de otro mundo</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, eveniet?</p>
                     </div>
                     <div class="servicio-ind">
-                        <img src="imagenes/dormir.png" alt="">
-                        <h3>Name</h3>
+                        <img src="imagenes/dormir2.png" alt="">
+                        <h3 class="titulo">Descansá sin ataduras</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, eveniet?</p>
                     </div>
                     <div class="servicio-ind">
                         <img src="imagenes/gandalf caminando.jpg" alt="">
-                        <h3>Name</h3>
+                        <h3 class="titulo">Explorá paisajes únicos</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, eveniet?</p>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
         <!-- CLIENTES HOBITTON -->
         <section class="portfolioClientes">
             <section class="clientes contenedor">
-            <h2 class="titulo">Qué dicen nuestros clientes</h2>
+            <h2 class="titulo2">Qué dicen nuestros clientes</h2>
             <div class="cards">
                 <div class="card wow animate__animated animate__bounceInLeft">
                     <img src="imagenes/Thorin.jpg" alt="">
@@ -175,7 +175,7 @@
         <!-- CLIENTES ISENGARD -->
         <section class="portfolioClientes">
             <section class="clientes contenedor">
-            <h2 class="titulo">Qué dicen nuestros clientes</h2>
+            <h2 class="titulo2">Qué dicen nuestros clientes</h2>
             <div class="cards">
                 <div class="card wow animate__animated animate__bounceInLeft">
                     <img src="imagenes/gandalf.jpg" alt="">
@@ -188,7 +188,7 @@
                     <img src="imagenes/saruman.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Saruman</h4>
-                        <p>El viejo ese no entiende nada. Isengard es el lugar ideal para alejarse de la paz de la naturaleza y el verde de los árboles. Las hermosas paredes de marmol le dan un toque especial al edificio, y la habitación está muy bien ventilada para cumplir con las normas sanitarias. ¡Mi estadía fue de vértigo!</p>
+                        <p>El viejo ese no entiende nada. Isengard es el lugar ideal para alejarse de la paz de la naturaleza y el verde de los árboles. Las hermosas paredes de marmol le dan un toque especial y la habitación está muy bien ventilada para cumplir con las normas sanitarias. ¡Mi estadía fue de vértigo!</p>
                     </div>
                 </div>
             </div>
@@ -238,13 +238,13 @@
         <!-- CLIENTES MORIA-->
         <section class="portfolioClientes">
             <section class="clientes contenedor">
-            <h2 class="titulo">Qué dicen nuestros clientes</h2>
+            <h2 class="titulo2">Qué dicen nuestros clientes</h2>
             <div class="cards">
                 <div class="card wow animate__animated animate__bounceInLeft">
-                    <img src="imagenes/Thorin.jpg" alt="">
+                    <img src="imagenes/gimli.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Gimli</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloremque quidem numquam consectetur rerum fugiat. Nobis earum debitis ab velit dolore, eveniet mollitia, hic eaque officiis quas fuga aliquid molestiae.</p>
+                        <p>¡Hasta un elfo se siente como un enano en Khazad-dûm! Con una arquitectura que saca el hipo, posee los salones más grandes jamás vistos. Es verdad que necesita algunas restauraciones, pero su valor cultural histórico es invaluable.</p>
                     </div>
                 </div>
                 <div class="card wow animate__animated animate__bounceInRight">
@@ -301,7 +301,7 @@
         <!-- CLIENTES MORDOR-->
         <section class="portfolioClientes">
             <section class="clientes contenedor">
-            <h2 class="titulo">Qué dicen nuestros clientes</h2>
+            <h2 class="titulo2">Qué dicen nuestros clientes</h2>
             <div class="cards">
                 <div class="card wow animate__animated animate__bounceInLeft">
                     <img src="imagenes/boromir.jpg" alt="">
@@ -311,10 +311,10 @@
                     </div>
                 </div>
                 <div class="card wow animate__animated animate__bounceInRight">
-                    <img src="imagenes/gandalf.jpg" alt="">
+                    <img src="imagenes/gollum.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Gollum</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias fugit officiis adipisci ex laudantium non voluptates magni ut rerum, qui cupiditate tenetur obcaecati, dolore a dolor eius repudiandae. Hic, id.</p>
+                        <p>Reservamos confiados por las hermosas fotos de la página, pero nos encontramos con un lugar mucho más oscuro, así es <i>my precious</i>. El dueño es bastante vigilante y tiene de mascota una araña mala onda, pero igual no la pasé tan mal. Volvería de nuevo, <i>¡Gollum!</i></p>
                     </div>
                 </div>
             </div>
@@ -339,7 +339,7 @@
                     </select>
                     
                     <label for="noches">¿Cuántas noches desea alojarse?</label>
-                    <input class="noches" type="number" name="noches" id="noches">
+                    <input class="noches" type="number" name="noches" id="noches" min="0">
                     <input class="submit" id="submit" type="submit" value="Confirmar la reserva">
                 </div>
 
@@ -452,22 +452,28 @@
 
     <!-- FOOTER -->
     <footer>
+
         <div class="contenedor-footer" id="contacto">
             <div class="contenedor-foo">
                 <h4>Email</h4>
-                <p>consultas@middleearttravel.com.ar</p>
+                <p>consultas@middleartravel.com.ar</p>
             </div>
             <div class="contenedor-foo">
-                <h4>Teléfono</h4>
-                <p>84 54 056 4235 6487</p>
+                <img src="imagenes/anillo.png" alt="">
             </div>
             <div class="contenedor-foo">
-                <h4>Dirección</h4>
-                <p>Calle Falsa 123, Ciudad de Buenos Aires</p>
+                <h4>Redes</h4>
+                <div class="redes">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
             </div>
         </div>
 
-        <h2 class="titulo-final">Designed by Cufa &copy; 2021</h2>
+        <h2 class="titulo-final">Middle-earth Travel</h2>
+        <h3 class="copyright">La empresa se reserva el derecho de admisión de cualquier troll. Buenos aires, Argentina. Designed by Cufa © 2021</h3>
 
     </footer>
 
