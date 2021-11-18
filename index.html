@@ -327,20 +327,23 @@
             <section class="contenedor">
                 <div class="formulario wow animate__animated animate__fadeInUp" id="formulario">
                     <h4>¡Haga su reserva!</h4>
-                    <label for="alojamientos">¿Qué alojamiento desea reservar?</label>
-                    <select name="alojamientos" id="alojamiento" required>
 
-                        <option value="empty" default="default" selected hidden></option>
-                        <option value="hobbiton">Hobbiton</option>
-                        <option value="isengard">Isengard</option>
-                        <option value="moria">Minas de Moria</option>
-                        <option value="mordor">Mordor</option>
-            
-                    </select>
-                    
-                    <label for="noches">¿Cuántas noches desea alojarse?</label>
-                    <input class="noches" type="number" name="noches" id="noches" min="0">
-                    <input class="submit" id="submit" type="submit" value="Confirmar la reserva">
+                    <form action="" id="form">
+                        <label for="alojamientos">¿Qué alojamiento desea reservar?</label>
+                        <select name="alojamientos" id="alojamiento" placeholder="Alojamiento" required>
+
+                            <option value="empty" default="default" selected hidden></option>
+                            <option value="hobbiton">Hobbiton</option>
+                            <option value="isengard">Isengard</option>
+                            <option value="moria">Minas de Moria</option>
+                            <option value="mordor">Mordor</option>
+                
+                        </select>
+                        
+                        <label for="noches">¿Cuántas noches desea alojarse?</label>
+                        <input class="noches" type="number" name="noches" id="noches" placeholder="Ingrese el num de noches" min="0">
+                        <input class="submit" id="submit" type="submit" value="Confirmar la reserva">
+                    </form>
                 </div>
 
             </section>
@@ -440,7 +443,7 @@
         
                     <div id="form-sec-code" class="form-field">
                         <label for="sec-code">CVV:</label>
-                        <input id="password" type="password" maxlength="3" placeholder="123" required>
+                        <input id="password" type="password" minlength="3" maxlength="3" placeholder="123" required>
                     </div>
         
                     <button type="submit" id="confirmarPago">Confirmar Pago</button>

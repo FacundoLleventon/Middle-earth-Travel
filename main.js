@@ -6,13 +6,13 @@ let libre = true
 
 // OBJETO HABITACION
 class Habitacion {
-    constructor(nombre, precio, noches, libre){
+    constructor(nombre, precio, noches, libre, subTotal, total){
         this.nombre = nombre
         this.precio = precio
         this.noches = noches;
         this.libre = libre;
-        this.subTotal = 0;
-        this.total = 0;
+        this.subTotal = subTotal;
+        this.total = total;
     }
 
     calcularSubTotal() {
@@ -164,7 +164,12 @@ $(document).ready(function() {
             }
 
             mostrarReserva()
+            
+
+            // RESETEA EL FORMULARIO
+            $('#form')[0].reset();
         }
+
     });
 
 
@@ -183,38 +188,41 @@ $(document).ready(function() {
     });
 
 
+    // CONTINUA EL PAGO SI EL USUARIO DEJA EL FORMULARIO A LA MITAD
+    if (localStorage.length > 0) {
 
-    //   if (localStorage.length > 0) {
-
-    //     let reservaRealizada = JSON.parse(localStorage.getItem('reservaRealizada'));
-    //     const reserva = new Habitacion(reservaRealizada);
+        let reservaRealizada = JSON.parse(localStorage.getItem('reservaRealizada'));
         
-    //     // MUESTRA LA VENTANA MODAL DE CONFIRMACION
-    //     $("#modal").fadeIn();
+        let reserva = new Habitacion (reservaRealizada.nombre, reservaRealizada.precio, reservaRealizada.noches, reservaRealizada.libre, reservaRealizada.subTotal, reservaRealizada.total);
 
-    //     /* FUNCION PARA MOSTRAR EL RESULTADO */
-    //     function mostrarReserva() {
+        
+        // MUESTRA LA VENTANA MODAL DE CONFIRMACION
+        $("#modal").fadeIn();
 
-    //         $("#resultado").html(
-    //         `Alojamiento: <b>${reserva.nombre}</b>
-    //         <br><br>
-    //         Cantidad de noches: <b>${reserva.noches}</b>
-    //         <br><br>
+        /* FUNCION PARA MOSTRAR EL RESULTADO */
+        function mostrarReserva() {
 
-    //         <b>Subtotal:</b><br>
-    //         $${reserva.precio} x ${reserva.noches} noches = $${(reserva.precio * reserva.noches)}<br>
-    //         + IVA 21% =  $${reserva.calcularIva()}
-    //         <br><br><br><br><br><br><br><br><br><br><br><br>
+            $("#resultado").html(
+            `Alojamiento: <b>${reserva.nombre}</b>
+            <br><br>
+            Cantidad de noches: <b>${reserva.noches}</b>
+            <br><br>
 
-    //         <h3>Total final:
-    //         <br>$${reserva.total}</h3><br><br>
-    //         `);
-    //     }
+            <b>Subtotal:</b><br>
+            $${reserva.precio} x ${reserva.noches} noches = $${(reserva.precio * reserva.noches)}<br>
+            + IVA 21% =  $${reserva.calcularIva()}
+            <br><br><br><br><br><br><br><br><br><br><br><br>
 
-    //     mostrarReserva()
-    // }
+            <h3>Total final:
+            <br>$${reserva.total}</h3><br><br>
+            `);
+        }
 
+        mostrarReserva()
 
+    }
+
+    // BOTON X PARA CANCELAR
     $("#cancelar").click(function (e) { 
         
         e.preventDefault();
