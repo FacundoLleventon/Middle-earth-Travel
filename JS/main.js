@@ -25,7 +25,7 @@ habitaciones.push(mordor);
 
 
 // AJAX PARA TOMAR LOS COMENTARIOS DESDE EL JSON Y APLICARLOS DINAMICAMENTE
-const urljson = "comentariosClientes.json";
+const urljson = "./JS/comentariosClientes.json";
     
 $.getJSON(urljson, function (respuesta, estado) {
                 
