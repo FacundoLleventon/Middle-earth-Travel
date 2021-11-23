@@ -1,17 +1,17 @@
 [
     {
         "nombre": "Thorin",
-        "imagen": "../imagenes/Thorin.jpg",
+        "imagen": "./imagenes/Thorin.jpg",
         "comentario": "El hotel es precioso. Adornada como una casa familiar, pueden entrar 13 enanos sin problema y encima sobra espacio. El buffete es abundante. Pocas veces vi tanta comida en una despensa. Hay que tener cuidado con el casero que es un poco ladrón, pero nada grave."
     },
     {
         "nombre": "Gandalf",
-        "imagen": "../imagenes/gandalf.jpg",
+        "imagen": "imagenes/gandalf.jpg",
         "comentario": "¡El alojamiento ideal para descansar unos días de la rutina de la magia! El ambiente es muy acojedor y la zona muy segura. Al dueño a veces le pinta desaparecer, pero cuando está, es muy atento. ¡Ah, ojo con la cabeza! Los techos son algo bajos"
     },
     {
         "nombre": "Gandalf",
-        "imagen": "../imagenes/gandalf.jpg",
+        "imagen": "/imagenes/gandalf.jpg",
         "comentario": "El lugar es de calidad dudosa. No puedo recomendarlo: la atención es pésima, el dueño me respondió mal cada vez que le pedía algo; para colmo, la habitación estaba muy vacía. No tenía paredes ni techo, y tuve que dormir en el piso. La vista es hermosa, eso sí."
     },
     {
