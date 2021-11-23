@@ -87,6 +87,7 @@ function reservarHabitacion() {
                 hobbiton.reservar()
                 document.getElementById("reservarHobbiton").innerHTML = `¡Agotado!`;
                 document.getElementById("reservarHobbiton").classList.add("agotado");
+                document.getElementById("reservarHobbiton").removeAttribute('href');
                 break;
 
             case "isengard":
@@ -95,6 +96,7 @@ function reservarHabitacion() {
                 isengard.reservar()
                 document.getElementById("reservarIsengard").innerHTML = `¡Agotado!`;
                 document.getElementById("reservarIsengard").classList.add("agotado");
+                document.getElementById("reservarIsengard").removeAttribute('href');
                 break;
 
             case "moria":
@@ -103,6 +105,7 @@ function reservarHabitacion() {
                 moria.reservar()
                 document.getElementById("reservarMoria").innerHTML = `¡Agotado!`;
                 document.getElementById("reservarMoria").classList.add("agotado");
+                document.getElementById("reservarMoria").removeAttribute('href');
                 break;
 
             case "mordor":
@@ -111,6 +114,7 @@ function reservarHabitacion() {
                 mordor.reservar()
                 document.getElementById("reservarMordor").innerHTML = `¡Agotado!`;
                 document.getElementById("reservarMordor").classList.add("agotado");
+                document.getElementById("reservarMordor").removeAttribute('href');
                 break;
         }
         
