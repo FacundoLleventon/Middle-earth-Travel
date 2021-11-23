@@ -1,0 +1,43 @@
+[
+    {
+        "nombre": "Thorin",
+        "imagen": "../imagenes/Thorin.jpg",
+        "comentario": "El hotel es precioso. Adornada como una casa familiar, pueden entrar 13 enanos sin problema y encima sobra espacio. El buffete es abundante. Pocas veces vi tanta comida en una despensa. Hay que tener cuidado con el casero que es un poco ladrón, pero nada grave."
+    },
+    {
+        "nombre": "Gandalf",
+        "imagen": "../imagenes/gandalf.jpg",
+        "comentario": "¡El alojamiento ideal para descansar unos días de la rutina de la magia! El ambiente es muy acojedor y la zona muy segura. Al dueño a veces le pinta desaparecer, pero cuando está, es muy atento. ¡Ah, ojo con la cabeza! Los techos son algo bajos"
+    },
+    {
+        "nombre": "Gandalf",
+        "imagen": "../imagenes/gandalf.jpg",
+        "comentario": "El lugar es de calidad dudosa. No puedo recomendarlo: la atención es pésima, el dueño me respondió mal cada vez que le pedía algo; para colmo, la habitación estaba muy vacía. No tenía paredes ni techo, y tuve que dormir en el piso. La vista es hermosa, eso sí."
+    },
+    {
+        "nombre": "Saruman",
+        "imagen": "../imagenes/saruman.jpg",
+        "comentario": "El viejo ese no entiende nada. Isengard es el lugar ideal para alejarse de la paz de la naturaleza y el verde de los árboles. Las hermosas paredes de marmol le dan un toque especial y la habitación está muy bien ventilada para cumplir con las normas sanitarias. ¡Mi estadía fue de vértigo!"
+    },
+    {
+        "nombre": "Gimli",
+        "imagen": "../imagenes/gimli.jpg",
+        "comentario": "¡Hasta un elfo se siente como un enano en Khazad-dûm! Con una arquitectura que saca el hipo, posee los salones más grandes jamás vistos. Es verdad que necesita algunas restauraciones, pero su valor cultural histórico es invaluable."
+    },
+    {
+        "nombre": "Gandalf",
+        "imagen": "../imagenes/gandalf.jpg",
+        "comentario": "El hotel no está mal, pero es algo antiguo y descuidado, no le vendría mal algunas refacciones (casi me rompo el alma cruzando un puente). Para colmo es muy sucio, me entró alto Balrog a la habitación en la mitad de la noche y lo tuve que sacar a palazos."
+    },
+    {
+        "nombre": "Boromir",
+        "imagen": "../imagenes/boromir.jpg",
+        "comentario": "One does not simply walk into Mordor. El alojamiento tiene un acceso muy complicado, no es nada fácil de encontrar, incluso el GPS se confundía con las indicaciones. El viaje se hace tan eterno que uno siente que muere por llegar."
+    },
+    {
+        "nombre": "Gollum",
+        "imagen": "../imagenes/gollum.jpg",
+        "comentario": "Reservamos confiados por las hermosas fotos de la página, pero nos encontramos con un lugar mucho más oscuro, así es <i>my precious</i>. El dueño es bastante vigilante y tiene de mascota una araña mala onda, pero igual no la pasé tan mal. Volvería de nuevo, <i>¡Gollum!</i>"
+    }
+
+]   

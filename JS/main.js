@@ -4,38 +4,10 @@ let noches = 0;
 let libre = true
 
 
-// OBJETO HABITACION
-class Habitacion {
-    constructor(nombre, precio, noches, libre, subTotal, total){
-        this.nombre = nombre
-        this.precio = precio
-        this.noches = noches;
-        this.libre = libre;
-        this.subTotal = subTotal;
-        this.total = total;
-    }
-
-    calcularSubTotal() {
-        this.subTotal = this.precio * this.noches;
-    }
-
-    calcularIva() {
-        return this.subTotal * 0.21;
-    }
-
-    calcularTotal() {
-        this.total = this.subTotal + this.calcularIva();
-    }
-
-    reservar() {
-        this.libre = false;
-    }
-
-}
-
 
 // ARRAY
 const habitaciones = [];
+
 
 // NUEVAS HABITACIONES
 const hobbiton = new Habitacion("Hobbiton", 5000, 0, true);
@@ -51,6 +23,53 @@ const mordor = new Habitacion("Mordor", 25000, 0, true);
 habitaciones.push(mordor);
 
 
+
+// AJAX PARA TOMAR LOS COMENTARIOS DESDE EL JSON Y APLICARLOS DINAMICAMENTE
+const urljson = "../JS/comentariosClientes.json";
+    
+$.getJSON(urljson, function (respuesta, estado) {
+                
+    if (estado === "success") {
+
+        const comentarios = respuesta;
+    
+        $("#nombreHobbiton1").html(`${comentarios[0].nombre}`);
+        $("#hobbiton1").prepend(`<img src="${comentarios[0].imagen}" alt="">`);
+        $("#comenHobbiton1").html(`${comentarios[0].comentario}`);
+        $("#nombreHobbiton2").html(`${comentarios[1].nombre}`);
+        $("#hobbiton2").prepend(`<img src="${comentarios[1].imagen}" alt="">`);
+        $("#comenHobbiton2").html(`${comentarios[1].comentario}`);
+
+        $("#nombreIsengard1").html(`${comentarios[2].nombre}`);
+        $("#isengard1").prepend(`<img src="${comentarios[2].imagen}" alt="">`);
+        $("#comenIsengard1").html(`${comentarios[2].comentario}`);
+        $("#nombreIsengard2").html(`${comentarios[3].nombre}`);
+        $("#isengard2").prepend(`<img src="${comentarios[3].imagen}" alt="">`);
+        $("#comenIsengard2").html(`${comentarios[3].comentario}`);
+
+        $("#nombreMoria1").html(`${comentarios[4].nombre}`);
+        $("#moria1").prepend(`<img src="${comentarios[4].imagen}" alt="">`);
+        $("#comenMoria1").html(`${comentarios[4].comentario}`);
+        $("#nombreMoria2").html(`${comentarios[5].nombre}`);
+        $("#moria2").prepend(`<img src="${comentarios[5].imagen}" alt="">`);
+        $("#comenMoria2").html(`${comentarios[5].comentario}`);
+
+        $("#nombreMordor1").html(`${comentarios[6].nombre}`);
+        $("#mordor1").prepend(`<img src="${comentarios[6].imagen}" alt="">`);
+        $("#comenMordor1").html(`${comentarios[6].comentario}`);
+        $("#nombreMordor2").html(`${comentarios[7].nombre}`);
+        $("#mordor2").prepend(`<img src="${comentarios[7].imagen}" alt="">`);
+        $("#comenMordor2").html(`${comentarios[7].comentario}`);
+
+    }
+});
+
+
+// PINTA LOS PRECIOS DE LAS HABITACIONES EN EL HTML
+$("#precioHobbiton").html(`Disfrutá de Hobbiton por sólo <strong>$${hobbiton.precio} por noche + IVA</strong>.`);
+$("#precioIsengard").html(`Disfrutá de Hobbiton por sólo <strong>$${isengard.precio} por noche + IVA</strong>.`);
+$("#precioMoria").html(`Disfrutá de Hobbiton por sólo <strong>$${moria.precio} por noche + IVA</strong>.`);
+$("#precioMordor").html(`Disfrutá de Hobbiton por sólo <strong>$${mordor.precio} por noche + IVA</strong>.`);
 
 
 /* FUNCION PARA RESERVAR HABITACION */
@@ -122,6 +141,7 @@ function validarNoches(){
 // EVENTO RESERVA
 $(document).ready(function() { 
 
+
     // SELECCIONAR ALOJAMIENTO
     $("#submit").click(function (e) { 
 
@@ -154,7 +174,7 @@ $(document).ready(function() {
                 <br><br>
 
                 <b>Subtotal:</b><br>
-                $${reserva.precio} x ${reserva.noches} noches = $${(reserva.precio * reserva.noches)}<br>
+                $${reserva.precio} x ${reserva.noches} noche/s = $${(reserva.precio * reserva.noches)}<br>
                 + IVA 21% =  $${reserva.calcularIva()}
                 <br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -178,7 +198,7 @@ $(document).ready(function() {
         
         e.preventDefault();
 
-        alert(`¡Su reserva a ha sido realizada con éxito!\n
+        alert(`¡Su reserva ha sido realizada con éxito!\n
         ¡Que tenga una estadía de fantasía!`);
 
         $("#modal").hide();
@@ -221,6 +241,7 @@ $(document).ready(function() {
         mostrarReserva()
 
     }
+    
 
     // BOTON X PARA CANCELAR
     $("#cancelar").click(function (e) { 

@@ -98,10 +98,12 @@ nav {
 }
 
 nav a {
+  font-family: aniron;
   color: white;
-  font-weight: 100;
+  font-size: 13px;
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 20px;
+  text-shadow: black 6px 5px 6px;
 }
 
 nav a:hover {
