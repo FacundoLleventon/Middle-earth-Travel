@@ -11,3 +11,4 @@ Funcionalidades:
 - Modificacion de DOM mediante JS
 - Aplicación de JQuery
 - Carga de datos estáticos guardados en JSON, mediante AJAX
+- Botón correspondiente de "Reservar" cambia a "Agotado" luego de reservar alojamiento
