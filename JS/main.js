@@ -4,7 +4,6 @@ let noches = 0;
 let libre = true
 
 
-
 // ARRAY
 const habitaciones = [];
 
@@ -202,12 +201,25 @@ $(document).ready(function() {
         
         e.preventDefault();
 
-        alert(`¡Su reserva ha sido realizada con éxito!\n
-        ¡Que tenga una estadía de fantasía!`);
+        $("#main2").html(`
+        <p>¡Su reserva ha sido realizada con éxito! <br>
+        ¡Que tenga una estadía de fantasía!</p>
+        <a href="" id="si">volver</a>
+        `);
 
-        $("#modal").hide();
+        $("#modal2").fadeIn();  // VIENE EL NUEVO MODAL DE CONFIRMACION
 
-        localStorage.clear();
+
+        $("#si").click(function (e) { 
+            e.preventDefault();
+            
+            $("#modal2").fadeOut("fast"); //SE VA EL MODAL AL CLICKEAR
+
+            $("#modal").hide(); // SE VA EL MODAL ANTERIOR DE PAGO
+        });
+
+
+        localStorage.clear(); // LIMPIA EL LOCAR STORAGE
     
     });
 
@@ -219,30 +231,59 @@ $(document).ready(function() {
         
         let reserva = new Habitacion (reservaRealizada.nombre, reservaRealizada.precio, reservaRealizada.noches, reservaRealizada.libre, reservaRealizada.subTotal, reservaRealizada.total);
 
-        
-        // MUESTRA LA VENTANA MODAL DE CONFIRMACION
-        $("#modal").fadeIn();
 
-        /* FUNCION PARA MOSTRAR EL RESULTADO */
-        function mostrarReserva() {
+        // VIENE EL NUEVO MODAL PARA CONFIRMAR SI EL USUARIO QUIERE CONTINUAR
+        $("#main2").html(`
+        <p>El ojo que todo lo ve dice que usted ya comenzó a realizar una reserva. ¿Desea continuarla?</p>
+        <div>
+            <a href="" id="si">Sí</a>
+            <a href="" id="no">No</a>
+        </div>
+        `);
 
-            $("#resultado").html(
-            `Alojamiento: <b>${reserva.nombre}</b>
-            <br><br>
-            Cantidad de noches: <b>${reserva.noches}</b>
-            <br><br>
+        $("#modal2").fadeIn();
 
-            <b>Subtotal:</b><br>
-            $${reserva.precio} x ${reserva.noches} noches = $${(reserva.precio * reserva.noches)}<br>
-            + IVA 21% =  $${reserva.calcularIva()}
-            <br><br><br><br><br><br><br><br><br><br><br><br>
+        // SI DICE QUE SÍ
+        $("#si").click(function (e) { 
+            e.preventDefault();
 
-            <h3>Total final:
-            <br>$${reserva.total}</h3><br><br>
-            `);
-        }
+            $("#modal2").fadeOut("fast");
 
-        mostrarReserva()
+            // MUESTRA LA VENTANA MODAL DE CONFIRMACION
+            $("#modal").fadeIn();
+
+            /* FUNCION PARA MOSTRAR EL RESULTADO */
+            function mostrarReserva() {
+
+                $("#resultado").html(
+                `Alojamiento: <b>${reserva.nombre}</b>
+                <br><br>
+                Cantidad de noches: <b>${reserva.noches}</b>
+                <br><br>
+
+                <b>Subtotal:</b><br>
+                $${reserva.precio} x ${reserva.noches} noches = $${(reserva.precio * reserva.noches)}<br>
+                + IVA 21% =  $${reserva.calcularIva()}
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+
+                <h3>Total final:
+                <br>$${reserva.total}</h3><br><br>
+                `);
+            }
+
+            mostrarReserva()
+
+        });
+
+        // SI DICE QUE NO
+        $("#no").click(function (e) { 
+            e.preventDefault();
+            
+            $("#modal2").hide(); //SE CIERRA EL MODAL
+
+            localStorage.clear();  //SE LIMPIA EL STORAGE
+
+        });
 
     }
     

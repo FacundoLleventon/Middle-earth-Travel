@@ -687,6 +687,102 @@ nav a:hover {
   color: #0d8a11;
 }
 
+#modal2 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(140, 140, 140, 0.623)), to(rgba(26, 26, 26, 0.753)));
+  background: linear-gradient(rgba(140, 140, 140, 0.623), rgba(26, 26, 26, 0.753));
+}
+
+#modal2 #main2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 3px #bd821b;
+  background-color: #414141;
+  margin-top: 12vh;
+}
+
+#modal2 #main2 p {
+  font-size: 14px;
+  font-family: aniron;
+  color: #bd821b;
+  margin-bottom: 20px;
+}
+
+#modal2 #main2 #si {
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 18px;
+  text-decoration: none;
+  background-color: #0d8a11;
+  color: #f2f2f2;
+  padding: 7px 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  border: 2px solid transparent;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+#modal2 #main2 #si:hover {
+  background-color: #f2f2f2;
+  border: 2px solid #0d8a11;
+  color: #0d8a11;
+}
+
+#modal2 #main2 #no {
+  margin: auto;
+  margin-left: 30px;
+  text-align: center;
+  border-radius: 18px;
+  text-decoration: none;
+  background-color: #e21515;
+  color: #f2f2f2;
+  padding: 7px 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  border: 2px solid transparent;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+#modal2 #main2 #no:hover {
+  background-color: #f2f2f2;
+  border: 2px solid #e21515;
+  color: #e21515;
+}
+
 /*  FOOTER  */
 footer {
   background: #414141;
