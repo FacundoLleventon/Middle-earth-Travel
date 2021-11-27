@@ -18,6 +18,7 @@ $color4: #bd821b;
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 
@@ -366,7 +367,7 @@ nav{
 .formulario{
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 420px;
     background: $color3;
     padding: 30px;
     margin: 20px auto;
@@ -381,51 +382,51 @@ nav{
     }
 
     h4{
-        font-size: 22px;
-        margin-bottom: 20px;
+        font-size: 20px;
+        margin-bottom: 18px;
         text-align: center;
+        font-family: aniron;
     }
 
     select, .noches{
 
         width: 100%;
-        background: $color4;
-        padding: 10px;
+        background: $color2;
+        padding: 8px;
         border-radius: 4px;
-        margin: 16px 0;
-        border: 1px solid $color4;
-        color: $color3;
-        font-size: 16px;
+        margin: 10px 0 16px 0;
+        border: 3px solid $color4;
+        font-size: 15px;
     }
 
     label{
-        margin-top: 16px;
+        margin-top: 15px;
     }
 
     .submit{
-        margin: 15px auto;
+        margin: 10px auto;
         text-align: center;
         border-radius: 18px;
-        background-color: $color4;
-        color: $color3;
+        background-color: transparent;
+        color: $color2;
         box-shadow: 0 9px #999;
-        padding: 7px 20px;
+        padding: 5px 14px;
         text-transform: uppercase;
-        font-size: 16px;
-        border: 2px solid transparent;
+        font-size: 14px;
+        border: 2px solid $color4;
         cursor: pointer;
         
 
         &:hover{
             pointer-events: visibleFill;
-            background-color: transparent;
+            background-color: $color4;
             border: 2px solid $color4;
-            color: $color4;
+            color: $color3;
         }
 
         &:active {
-            background-color: transparent;
-            color: $color4;
+            background-color: $color4;
+            color: $color3;
             box-shadow: 0 5px #666;
             transform: translateY(4px);
           }
@@ -739,8 +740,217 @@ footer{
 
 
 /*  MEDIA QUERY  */
+@media screen and (max-width: 1367px) {
+    
+    // NAV
+    nav{
+        a{
+            font-size: 12px;
+            margin-right: 18px;
+        }
+    }
 
-@media screen and (max-width: 900px) {
+    /*  HEADER  */
+    header{
+ 
+        .textos-header{
+
+            h1{
+                font-family: ringbearer;
+                font-size: 50px;
+            }
+
+            h2{
+                font-size: 25px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .contenedor{
+        width: 80%;
+        max-width: 1200px;
+    }
+
+    .titulo{
+        font-family: ringbearer;
+        color: $color4;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    .titulo2{
+        font-family: aniron;
+        color: $color4;
+        font-size: 19px;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    /*  NUESTRO SERVICIO  */
+    .servicio-ind{
+        width: 29%;
+        text-align: center;
+
+        h3{
+            font-size: 15px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .servicio-ind:nth-child(1), .servicio-ind:nth-child(2), .servicio-ind:nth-child(3){
+        margin-bottom: 20px;
+    }
+
+    /*  ALOJAMIENTOS  */
+    .contenido-textos{
+        p{
+            font-size: 15px;
+            padding: 0 0 20px 15px;
+        }
+
+        h3{
+            font-size: 17px;
+        }
+
+        .reservar{
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+
+    /*  CLIENTES  */
+    .cards{
+
+        .card{
+
+            p{
+                font-size: 15px;
+            }
+
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .card:first-child{
+            margin-bottom: 30px;
+        }
+    }
+
+    // VENTANA MODAL DE CONFIRMACION DE PAGO
+    .modal{
+
+        #main {
+            width: 450px;
+            height: 450px;
+            margin-top: 30vh;
+            }
+
+        #left {
+
+            h3{
+                margin-top: -110px;
+            }
+
+            #resultado{
+                padding-top: 20px;
+            }
+        }
+
+        #right {
+
+            font-size: 12px;
+
+            h1{
+                font-size: 18px;
+            }
+        }
+
+        #right form input,
+        #right form select {
+            padding: 0px;
+        }
+    }
+
+    // VENTANA MODAL DE CONFIRMACION LOCALSTORAGE/FINALIZACIÓN
+    #modal2{
+
+        #main2{
+            display:flex;
+            flex-direction: column;
+            text-align: center;
+            margin: auto;
+            position: relative;
+            width: 400px;
+            height: 200px;
+            padding: 20px;
+            border-radius: 10px;
+            border: solid 3px $color4;
+            background-color: $color3;
+            margin-top: 35vh;
+
+            p{
+                font-size: 14px;
+                font-family: aniron;
+                color: $color4;
+                margin-bottom: 20px;
+            }
+
+            #si{
+                margin: 10px auto;
+                text-align: center;
+                border-radius: 18px;
+                text-decoration: none;
+                background-color: $color1;
+                color: $color2;
+                padding: 7px 20px;
+                text-transform: uppercase;
+                font-size: 13px;
+                border: 2px solid transparent;
+                transition: .3s ease;
+
+                &:hover{
+                    background-color: $color2;
+                    border: 2px solid $color1;
+                    color: $color1;
+                }
+            }
+
+            #no{
+                margin: auto;
+                margin-left: 30px;
+                text-align: center;
+                border-radius: 18px;
+                text-decoration: none;
+                background-color: rgb(226, 21, 21);
+                color: $color2;
+                padding: 7px 20px;
+                text-transform: uppercase;
+                font-size: 13px;
+                border: 2px solid transparent;
+                transition: .3s ease;
+
+                &:hover{
+                    background-color: $color2;
+                    border: 2px solid rgb(226, 21, 21);
+                    color: rgb(226, 21, 21);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
     header{
         background-position: center;
     }

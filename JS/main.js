@@ -125,13 +125,52 @@ function reservarHabitacion() {
 // FUNCION PARA VALIDAR EL ALOJAMIENTO Y NOCHES INGRESADAS
 function validarNoches(){
    
-    if ($("#noches").val() <= 0) {
-        alert("La cantidad de noches debe ser mayor a 0");
+    // SI LA CANTIDAD DE NOCHES NO ES LA CORRECTA
+    if (($("#noches").val() <= 0) || ($("#noches").val() > 10)) {
+
+        $("#main2").html(`
+        <p><i>You shall not pass!</i></p>
+        <p>Por favor, ingrese una cantidad de noches válida.</p>
+        <div>
+            <a href="" id="si">Ok</a>
+        </div>
+        `);
+
+        $("#modal2").fadeIn("fast");
+
+        //SE VA EL MODAL AL CLICKEAR
+        $("#si").click(function (e) { 
+            e.preventDefault();
+            
+            $("#modal2").fadeOut("fast"); 
+        });
+
         $("#noches").focus();
+        
         return false;
+
+      // SI NO SE INGRESA UN ALOJAMIENTO  
     } else if ($("#alojamiento").val() == "empty") {
-        alert("Seleccione su alojamiento");
-        $("#noches").focus();
+        
+        $("#main2").html(`
+        <p><i>You shall not pass!</i></p>
+        <p>Por favor, seleccione el lugar donde desea hospedarse.</p>
+        <div>
+            <a href="" id="si">Ok</a>
+        </div>
+        `);
+
+        $("#modal2").fadeIn("fast");
+
+        //SE VA EL MODAL AL CLICKEAR
+        $("#si").click(function (e) { 
+            e.preventDefault();
+            
+            $("#modal2").fadeOut("fast");
+        });
+
+        $("#alojamiento").focus();
+
         return false;
 
     } else

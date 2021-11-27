@@ -13,6 +13,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -426,7 +427,7 @@ nav a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 500px;
+  width: 420px;
   background: #414141;
   padding: 30px;
   margin: 20px auto;
@@ -448,51 +449,51 @@ nav a:hover {
 }
 
 .formulario h4 {
-  font-size: 22px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 18px;
   text-align: center;
+  font-family: aniron;
 }
 
 .formulario select, .formulario .noches {
   width: 100%;
-  background: #bd821b;
-  padding: 10px;
+  background: #f2f2f2;
+  padding: 8px;
   border-radius: 4px;
-  margin: 16px 0;
-  border: 1px solid #bd821b;
-  color: #414141;
-  font-size: 16px;
+  margin: 10px 0 16px 0;
+  border: 3px solid #bd821b;
+  font-size: 15px;
 }
 
 .formulario label {
-  margin-top: 16px;
+  margin-top: 15px;
 }
 
 .formulario .submit {
-  margin: 15px auto;
+  margin: 10px auto;
   text-align: center;
   border-radius: 18px;
-  background-color: #bd821b;
-  color: #414141;
+  background-color: transparent;
+  color: #f2f2f2;
   -webkit-box-shadow: 0 9px #999;
           box-shadow: 0 9px #999;
-  padding: 7px 20px;
+  padding: 5px 14px;
   text-transform: uppercase;
-  font-size: 16px;
-  border: 2px solid transparent;
+  font-size: 14px;
+  border: 2px solid #bd821b;
   cursor: pointer;
 }
 
 .formulario .submit:hover {
   pointer-events: visibleFill;
-  background-color: transparent;
+  background-color: #bd821b;
   border: 2px solid #bd821b;
-  color: #bd821b;
+  color: #414141;
 }
 
 .formulario .submit:active {
-  background-color: transparent;
-  color: #bd821b;
+  background-color: #bd821b;
+  color: #414141;
   -webkit-box-shadow: 0 5px #666;
           box-shadow: 0 5px #666;
   -webkit-transform: translateY(4px);
@@ -882,7 +883,166 @@ footer .copyright {
 }
 
 /*  MEDIA QUERY  */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1367px) {
+  nav a {
+    font-size: 12px;
+    margin-right: 18px;
+  }
+  /*  HEADER  */
+  header .textos-header h1 {
+    font-family: ringbearer;
+    font-size: 50px;
+  }
+  header .textos-header h2 {
+    font-size: 25px;
+    font-weight: 300;
+  }
+  .contenedor {
+    width: 80%;
+    max-width: 1200px;
+  }
+  .titulo {
+    font-family: ringbearer;
+    color: #bd821b;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .titulo2 {
+    font-family: aniron;
+    color: #bd821b;
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  /*  NUESTRO SERVICIO  */
+  .servicio-ind {
+    width: 29%;
+    text-align: center;
+  }
+  .servicio-ind h3 {
+    font-size: 15px;
+  }
+  .servicio-ind p {
+    font-size: 15px;
+  }
+  .servicio-ind img {
+    width: 100%;
+  }
+  .servicio-ind:nth-child(1), .servicio-ind:nth-child(2), .servicio-ind:nth-child(3) {
+    margin-bottom: 20px;
+  }
+  /*  ALOJAMIENTOS  */
+  .contenido-textos p {
+    font-size: 15px;
+    padding: 0 0 20px 15px;
+  }
+  .contenido-textos h3 {
+    font-size: 17px;
+  }
+  .contenido-textos .reservar {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  /*  CLIENTES  */
+  .cards .card p {
+    font-size: 15px;
+  }
+  .cards .card img {
+    width: 100px;
+    height: 100px;
+  }
+  .cards .card:first-child {
+    margin-bottom: 30px;
+  }
+  .modal #main {
+    width: 450px;
+    height: 450px;
+    margin-top: 30vh;
+  }
+  .modal #left h3 {
+    margin-top: -110px;
+  }
+  .modal #left #resultado {
+    padding-top: 20px;
+  }
+  .modal #right {
+    font-size: 12px;
+  }
+  .modal #right h1 {
+    font-size: 18px;
+  }
+  .modal #right form input,
+  .modal #right form select {
+    padding: 0px;
+  }
+  #modal2 #main2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 3px #bd821b;
+    background-color: #414141;
+    margin-top: 35vh;
+  }
+  #modal2 #main2 p {
+    font-size: 14px;
+    font-family: aniron;
+    color: #bd821b;
+    margin-bottom: 20px;
+  }
+  #modal2 #main2 #si {
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 18px;
+    text-decoration: none;
+    background-color: #0d8a11;
+    color: #f2f2f2;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 2px solid transparent;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+  }
+  #modal2 #main2 #si:hover {
+    background-color: #f2f2f2;
+    border: 2px solid #0d8a11;
+    color: #0d8a11;
+  }
+  #modal2 #main2 #no {
+    margin: auto;
+    margin-left: 30px;
+    text-align: center;
+    border-radius: 18px;
+    text-decoration: none;
+    background-color: #e21515;
+    color: #f2f2f2;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 2px solid transparent;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+  }
+  #modal2 #main2 #no:hover {
+    background-color: #f2f2f2;
+    border: 2px solid #e21515;
+    color: #e21515;
+  }
+}
+
+@media screen and (max-width: 1100px) {
   header {
     background-position: center;
   }
