@@ -202,7 +202,7 @@ $(document).ready(function() {
             localStorage.setItem('reservaRealizada', JSON.stringify(reserva));
 
 
-            // MUESTRA LA VENTANA MODAL DE CONFIRMACION
+            // MUESTRA LA VENTANA MODAL DE REALIZACION DE PAGO
             $("#modal").fadeIn();
 
 
@@ -235,7 +235,7 @@ $(document).ready(function() {
     });
 
 
-    // CONFIRMAR PAGO
+    // PAGO CONFIRMADO
     $("#tarjeta").submit(function (e) { 
         
         e.preventDefault();
@@ -288,7 +288,7 @@ $(document).ready(function() {
 
             $("#modal2").fadeOut("fast");
 
-            // MUESTRA LA VENTANA MODAL DE CONFIRMACION
+            // MUESTRA LA VENTANA MODAL DE REALIZACION DE PAGO
             $("#modal").fadeIn();
 
             /* FUNCION PARA MOSTRAR EL RESULTADO */
